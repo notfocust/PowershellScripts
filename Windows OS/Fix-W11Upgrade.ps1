@@ -1,6 +1,7 @@
 <#
+https://github.com/notfocust/PowershellScripts/edit/main/Windows%20OS/Fix-W11Upgrade.ps1
 Script version: 0.1
-Author: nofocust
+Author: notfocust
 Description: This script runs prechecks and fixes for Windows 11 updates.
 We also remove the Windows 11 requirements, because we love Microsoft
 Warning: Use at your own risk. Read every line carefully.
@@ -465,6 +466,7 @@ function Show-MainMenu {
 }
 
 Show-MainMenu
+
 
 
 
