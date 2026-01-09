@@ -1,13 +1,13 @@
 <#
 Script version: 0.1
-Author: BigBrainToolieWhoolie
+Author: nofocust
 Description: This script runs prechecks and fixes for Windows 11 updates.
 We also remove the Windows 11 requirements, because we love Microsoft
 Warning: Use at your own risk. Read every line carefully.
 #>
 
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-    Write-Host "Geen admin rechten. Script start opnieuw met verhoogde rechten..." -ForegroundColor Yellow
+    Write-Host "No Admin permissions. Starting as admin..." -ForegroundColor Yellow
     Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath` format" -Verb RunAs
     exit
 }
@@ -465,5 +465,6 @@ function Show-MainMenu {
 }
 
 Show-MainMenu
+
 
 
