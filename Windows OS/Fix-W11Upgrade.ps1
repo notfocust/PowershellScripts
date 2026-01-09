@@ -3,7 +3,7 @@ Script version: 0.1
 Author: BigBrainToolieWhoolie
 Description: This script runs prechecks and fixes for Windows 11 updates.
 We also remove the Windows 11 requirements, because we love Microsoft
-Warning: Use at your own risk.
+Warning: Use at your own risk. Read every line carefully.
 #>
 
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
@@ -465,4 +465,5 @@ function Show-MainMenu {
 }
 
 Show-MainMenu
+
 
