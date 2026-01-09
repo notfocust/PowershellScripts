@@ -452,7 +452,7 @@ function Show-MainMenu {
     Write-Host "4. Run deep scan for blockers and drivers"
     Write-Host "5. Run SFC and DISM system file repair"
     Write-Host "0. Exit"
-    $choice = Read-Host "`nKies een optie"
+    $choice = Read-Host "`Choose an option"
     switch ($choice) {
         "1" { Reset-WindowsUpdate; Show-MainMenu }
         "2" { Set-BypassRegistryTweaks; Show-MainMenu }
@@ -465,3 +465,4 @@ function Show-MainMenu {
 }
 
 Show-MainMenu
+
