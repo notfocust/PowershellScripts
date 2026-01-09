@@ -1,5 +1,3 @@
-﻿#removeteamsaccounts.ps1
-
 # Ensure the script is running as Administrator
 $IsAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 if (-not $IsAdmin) {
@@ -16,3 +14,4 @@ Remove-Item -Path "$env:LOCALAPPDATA\Packages\MSTeams_8wekyb3d8bbwe" -Recurse -F
 
 # Start Teams to recreate necessary files
 Start "ms-teams.exe"
+
